@@ -50,6 +50,8 @@ public class CurrencyConversionController {
         BigDecimal amount = quantity.multiply(multiplier);
         currencyConversion.setAmount(amount);
         currencyConversion.setQuantity(quantity);
+        String environment = currencyConversion.getEnvironment() + " feign";
+        currencyConversion.setEnvironment(environment);
         return currencyConversion;
     }
 }
